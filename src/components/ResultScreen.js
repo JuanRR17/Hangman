@@ -37,30 +37,31 @@ const ResultScreen = (props) => {
     };
 
         return (
-        <ResultContainer 
-            displayResult={displayResult} 
-            bckgrColor={bckgrColor}
-            >
-            <WordResult 
-                endGameScreen={endGameScreen}
-                language={language}
-            />               
-            <div>
-                <div className='word'>
-                    {wordToGuess}
+            <ResultContainer 
+                className='col-sm-9 col-md-6 position'
+                displayResult={displayResult} 
+                bckgrColor={bckgrColor}
+                >
+                <WordResult 
+                    endGameScreen={endGameScreen}
+                    language={language}
+                />               
+                <div>
+                    <div className='word'>
+                        {wordToGuess}
+                    </div>
                 </div>
-            </div>
-            <MainButton 
-                onClickMain = {()=>onClickMain()} 
-                inactiveWords={inactiveWords} 
-                wordList={wordList}
-                language={language}
-                />
-            {language==="es" 
-            &&
-            <Definition 
-                wordDefinition={wordDefinition}/>}
-        </ResultContainer>
+                <MainButton 
+                    onClickMain = {()=>onClickMain()} 
+                    inactiveWords={inactiveWords} 
+                    wordList={wordList}
+                    language={language}
+                    />
+                {language==="es" 
+                &&
+                <Definition 
+                    wordDefinition={wordDefinition}/>}
+            </ResultContainer>        
     );
 };
 
@@ -69,9 +70,9 @@ export default ResultScreen;
 const ResultContainer = styled.div`
     z-index: 5;
     position:absolute;
-    top:200px;
-    width:60%;
-    left:20%;
+    top:30%;
+    ${'' /* width:60%; */}
+    ${'' /* left:0%; */}
     display:${props=>props.displayResult};
     background-color:white;
     padding:25px;
@@ -86,4 +87,5 @@ const ResultContainer = styled.div`
         border-radius:20px;
         border:3px solid black;
     }
+
 `;

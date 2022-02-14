@@ -10,3 +10,19 @@ body {
   font-family: 'Orbitron', sans-serif;
   background-color: rgba(2, 53, 87, 0.9);
 }
+
+.position {
+  left:0%;
+}
+
+@media screen and (min-width: 575px) {
+  .position {
+    left:10%;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .position {
+    left:20%;
+  }
+}

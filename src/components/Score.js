@@ -91,13 +91,16 @@ const Score = (props) => {
         <ScorerContainer className="container col-lg-10">
             <div className="row justify-content-center">
                 <div className="sc col-sm col-lg-3 row justify-content-center justify-content-xl-between">
-                    <div className="col-auto p-0">{lang.words}:</div><div className="col-auto col-sm-9 col-lg-auto text-center">{wordsLeft}</div> 
+                    <div className="col-auto p-0">{lang.words}:</div>
+                    <div className="col-auto col-sm-9 col-lg-auto text-center">{wordsLeft}</div> 
                 </div>
                 <div className="sc col-sm col-lg-3 row justify-content-center justify-content-xl-between">
-                    <div className="col-auto p-0">{lang.time}: </div><div className="col-auto col-sm-9 col-lg-auto text-center">{stopTimer ? timeToDiscount : time}</div>
+                    <div className="col-auto p-0">{lang.time}: </div>
+                    <div className="col-auto col-sm-9 col-lg-auto text-center">{stopTimer ? timeToDiscount : time}</div>
                 </div>
                 <div className="sc col-sm col-lg-3 row justify-content-center justify-content-xl-between">
-                    <div className="col-auto p-0">{lang.score}: </div><div className="col-auto col-sm-9 col-lg-auto text-center">{score}</div>
+                    <div className="col-auto p-0">{lang.score}: </div>
+                    <div className="col-auto col-sm-9 col-lg-auto text-center">{score}</div>
                 </div>
             </div>
         </ScorerContainer>
